@@ -1,0 +1,39 @@
+@use '../../breakpoints'
+.validation_container
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    .title_validation
+        margin-bottom: 1.5rem
+        font-size: 2rem
+        transition: all 0.2s ease-in-out
+        @include breakpoints.break_MD()
+            font-size: 1.7rem
+            margin-bottom: 1.3rem
+        @include breakpoints.break_SM()
+            font-size: 1.5rem
+            margin-bottom: 1.2rem
+        span
+            font-size: 1.2rem
+            color: var(--primary)
+            @include breakpoints.break_MD()
+                font-size: 1rem
+            @include breakpoints.break_SM()
+                font-size: 0.8rem
+    .list_cards
+        display: grid
+        grid-template-columns: repeat(auto-fit,minmax(20rem,1fr))
+        width: 100%
+        grid-auto-rows: 26rem
+        min-height: 15rem
+        gap: 0.2rem
+        justify-content: center
+        @include breakpoints.break_MD()
+            grid-template-columns: repeat(auto-fit,minmax(19rem,1fr))
+            grid-auto-rows: 25rem
+            gap: 0.5rem
+        @include breakpoints.break_SM()
+            grid-template-columns: repeat(auto-fit,minmax(16rem,0.95fr))
+            grid-auto-rows: 24rem
+            gap: 1rem
